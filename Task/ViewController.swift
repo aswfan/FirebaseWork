@@ -12,19 +12,33 @@ import FirebaseDatabase
 class ViewController: UIViewController {
     
     var rootRef: DatabaseReference!
+    var task: String? = nil
     
     @IBOutlet weak var ititle: UILabel!
     @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var create_on: UILabel!
     @IBOutlet weak var due_on: UILabel!
     
+    
+    @IBAction func Finish(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
-        self.showMessagePrompt("Welcome!")
-        
         rootRef = Database.database().reference()
-        let idRef = rootRef.child("tasks/id")
+        let idRef = rootRef.child("tasks/\(task!)")
         
+        idRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            for item in value! {
+                print(item)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    
         idRef.child("title").observeSingleEvent(of: .value, with: { (snap) in
             self.ititle.text = snap.value as? String
             self.ititle.sizeToFit()

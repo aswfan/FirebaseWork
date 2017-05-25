@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
                 }
                 
                 let sb = UIStoryboard(name: "Main", bundle: nil)
-                let vc: UIViewController = sb.instantiateViewController(withIdentifier: "home")
+                let vc: UIViewController = sb.instantiateViewController(withIdentifier: "tasks")
                 
                 self.present(vc, animated: true, completion: nil)
             }

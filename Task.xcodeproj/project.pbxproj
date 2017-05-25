@@ -18,6 +18,8 @@
 		9D0A0CC31ED65C2F001B8047 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A0CC21ED65C2F001B8047 /* TaskTests.swift */; };
 		9D0A0CCE1ED65C2F001B8047 /* TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A0CCD1ED65C2F001B8047 /* TaskUITests.swift */; };
 		9D0A0CDC1ED65C37001B8047 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A0CDB1ED65C37001B8047 /* GoogleService-Info.plist */; };
+		9D8C2AED1ED78C720094E8A9 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2AEC1ED78C720094E8A9 /* AddTaskViewController.swift */; };
+		9D8C2AF11ED791F20094E8A9 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2AF01ED791F20094E8A9 /* TaskTableViewController.swift */; };
 		9DBE94FD1ED6879800449C94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE94FC1ED6879800449C94 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		9D0A0CCD1ED65C2F001B8047 /* TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUITests.swift; sourceTree = "<group>"; };
 		9D0A0CCF1ED65C2F001B8047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D0A0CDB1ED65C37001B8047 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D8C2AEC1ED78C720094E8A9 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		9D8C2AF01ED791F20094E8A9 /* TaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		9DBE94FC1ED6879800449C94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A58D5AC5C92AC0688D35D63E /* Pods_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16C2AA16A6E0B195824E8E8 /* Pods_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,8 @@
 				9D0A0CB61ED65C2F001B8047 /* LaunchScreen.storyboard */,
 				9D0A0CB91ED65C2F001B8047 /* Info.plist */,
 				9DBE94FC1ED6879800449C94 /* LoginViewController.swift */,
+				9D8C2AEC1ED78C720094E8A9 /* AddTaskViewController.swift */,
+				9D8C2AF01ED791F20094E8A9 /* TaskTableViewController.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -453,7 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8C2AF11ED791F20094E8A9 /* TaskTableViewController.swift in Sources */,
 				9DBE94FD1ED6879800449C94 /* LoginViewController.swift in Sources */,
+				9D8C2AED1ED78C720094E8A9 /* AddTaskViewController.swift in Sources */,
 				9D0A0CB01ED65C2F001B8047 /* ViewController.swift in Sources */,
 				9D0A0CAE1ED65C2F001B8047 /* AppDelegate.swift in Sources */,
 			);
