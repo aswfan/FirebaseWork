@@ -13,6 +13,8 @@ target 'Task' do
   pod 'FacebookShare'
   pod 'GoogleSignIn'
   pod 'Firebase/Database'
+  pod 'Firebase'
+  pod 'Firebase/Messaging'
 
   target 'TaskTests' do
     inherit! :search_paths
