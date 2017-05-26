@@ -28,18 +28,18 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if backFromAddTask {
             self.showMessagePrompt("Add Success!")
             backFromAddTask = false
+            
+            self.tableview.reloadData()
         }
-        
-        
     }
     
     @IBAction func AddTask(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc: UIViewController = sb.instantiateViewController(withIdentifier: "addTask")
+        let vc: AddTaskViewController = sb.instantiateViewController(withIdentifier: "addTask") as! AddTaskViewController
+        vc.vc = self
         self.present(vc, animated: true, completion: {() in
             self.backFromAddTask = true
         })
-        
     }
 
     override func viewDidLoad() {
@@ -50,12 +50,15 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableview.tableFooterView = UIView()
         
         rootRef = Database.database().reference()
+        refreshTable()
+    }
+    
+    func refreshTable() {
         rootRef.child("tasks").observeSingleEvent(of: .value, with: { (snap) in
             let value = snap.value as? NSDictionary
             self.tasks = value!.allKeys as! [String]
             self.tableview.reloadData()
         })
-        
     }
     
     func showMessagePrompt(_ message: String) {
