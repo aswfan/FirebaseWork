@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var create_on: UILabel!
     @IBOutlet weak var due_on: UILabel!
     
+    @IBAction func addtolist(_ sender: UIButton) {
+//        rootRef.child("user/yyfan/tasks/\(task)").setValue(task)
+    }
     
     @IBAction func Finish(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
